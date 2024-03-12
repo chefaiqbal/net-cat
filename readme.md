@@ -26,9 +26,11 @@ This program work similar to how the original NetCat works, i.e. it creates a gr
 ### How to install
 
 ```
-git clone git@github.com:ArtEmerged/net-cat.git && cd net-cat/
+- https://learn.reboot01.com/git/tnji/net-cat.git 
 
-go build -o TCPChat cmd/main.go 
+- cd net-cat/
+
+- go build -o TCPChat cmd/main.go 
 ```
 
 ### How to go run
