@@ -9,7 +9,7 @@ import (
 )
 
 func StartServer(port string) {
-	li, errStart := net.Listen("tcp", ":"+port)
+	li, errStart := net.Listen("tcp",":" +port)
 	if errStart != nil {
 		log.Println(portUse)
 		os.Exit(0)
