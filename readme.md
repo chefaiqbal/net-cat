@@ -1,6 +1,13 @@
 # Net-Cat
 
-![preview](./static/preview.gif)
+
+| Feature              | Original NetCat  | This Project           |
+|--------------------- |----------------- |------------------------|
+| Functionality        | Network tool     | Group Chat             |
+| Architecture         | Single process   | Server-Client          |
+| Multiple Connections | No               | Yes (multiple clients) |
+| Chat Functionality   | No               | Yes                    |
+
 
 ## Description
 
@@ -128,3 +135,4 @@ _)      \.___.,|     .'
 ### Autor
 
 * <a href="https://github.com/tichagodwill" target="_blank">GitHub.com/tichagodwill</a>
+* <a href="https://github.com/chefaiqbal" target="_blank">GitHub.com/chefaiqbal</a>
