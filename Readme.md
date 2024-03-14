@@ -38,7 +38,7 @@ This program work similar to how the original NetCat works, i.e. it creates a gr
 ### How to install
 
 ```
-- https://github.com/chefaiqbal/net-cat.git
+- git clone https://github.com/chefaiqbal/net-cat.git
 
 - cd net-cat/
 
