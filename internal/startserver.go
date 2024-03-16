@@ -8,6 +8,11 @@ import (
 	"sync"
 )
 
+// StartServer starts a TCP server on the specified port.
+// It listens for incoming connections and handles them concurrently.
+// If the maximum number of connections is reached, new connections will be rejected.
+// The server maintains a map of connected users and a channel for sending messages.
+// The server runs indefinitely until an error occurs or it is manually closed.
 func StartServer(port string) {
 	li, errStart := net.Listen("tcp",":" +port)
 	if errStart != nil {

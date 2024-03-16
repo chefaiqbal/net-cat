@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// DefPort is the default port number used by the application.
 const (
 	DefPort       = "8989"
 	portUse       = "This port is already in use"
@@ -22,16 +23,18 @@ const (
 	exitServer    = "Sorry. The server has been suspended"
 )
 
+// message represents a chat message.
 type message struct {
-	time string
-	user string
-	text string
+	time string // The timestamp of the message.
+	user string // The username of the sender.
+	text string // The content of the message.
 }
 
+// server represents the chat server.
 type server struct {
-	listen       net.Listener
-	messages     chan message
-	users        map[string]net.Conn
-	allmessages  string
-	mu           sync.RWMutex
+	listen      net.Listener         // The network listener for accepting incoming connections.
+	messages    chan message         // The channel for sending and receiving chat messages.
+	users       map[string]net.Conn  // The map of connected users, with their usernames as keys and network connections as values.
+	allmessages string               // The concatenated string of all chat messages.
+	mu          sync.RWMutex         // The mutex for synchronizing access to the server's state.
 }

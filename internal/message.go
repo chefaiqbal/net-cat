@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-
+// write continuously writes messages to connected users.
 func (s *server) write() {
 	for {
 		msg := <-s.messages
@@ -28,6 +28,8 @@ func (s *server) write() {
 	}
 }
 
+// toString converts a message to a string format.
+// It returns the converted string and a boolean indicating if the message is valid.
 func (s *server) toString(msg message) (string, bool) {
 	if s.checkEmpty(msg.text) || s.checkRune(msg.text) {
 		return fmt.Sprintf("\n%s%s", msg.user, msg.text), false
@@ -40,6 +42,7 @@ func (s *server) toString(msg message) (string, bool) {
 	return text, true
 }
 
+// saveMessage saves a message to the server's message history.
 func (s *server) saveMessage(msg string) {
 	s.allmessages += msg
 }
